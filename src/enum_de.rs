@@ -98,7 +98,7 @@ pub fn enum_de(input: &ItemEnum, cratename: Ident) -> syn::Result<TokenStream2> 
                     #variant_arms
                     _ => return Err(#cratename::io::Error::new(
                         #cratename::io::ErrorKind::InvalidInput,
-                        #cratename::format!("Unexpected variant index: {:?}", variant_idx),
+                        format!("Unexpected variant index: {:?}", variant_idx),
                     ))
                 };
                 #init
